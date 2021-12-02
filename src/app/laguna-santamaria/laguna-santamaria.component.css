@@ -2,6 +2,7 @@
 .body{
     background-color: #A7D2CB;
     text-align: left;
+    
 }
 .iframe{
 border-radius: 10%;
@@ -16,10 +17,10 @@ position: relative;
 bottom:600px;
 left:2%;
 }
-h1{
+.h1{
     position: relative;
     bottom:600px;
-    left:2%;
+    left:35%;
 }
 .table{
     width: 30%;
@@ -27,6 +28,14 @@ h1{
     bottom: 1200px;;
     left:35%;  
     background-color:#F2D388 ;
+}
+.alerta{
+    width: 30%;
+    position: relative;
+    bottom: 1200px;;
+    left:35%;  
+    text-align: center;
+    background-color:#F2D388 ; 
 }
    /*#A7D2CB AZULITO*/
    /*#F2D388 AMARILLO*/

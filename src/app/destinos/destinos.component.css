@@ -12,6 +12,7 @@
    /*#C98474 SALMON*/
    /*#874C62 MORADO*/
    .buscar{
+    margin-top: -2%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -21,25 +22,26 @@
     transform: translate(-50%,-500%);
     background: #C98474;
     padding: 10px;
-    height: 50px;
+    height: 40px;
     border-radius: 30px;
 }
 .buscar_texto{
-    
+   
     border: none;
     background: #C98474;
     outline: none;
     color: #F2D388;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 35px;
     transition: .8s;
     width: 0;
 }
 .btn{
-    top:0;
+  
     right: 0%;
     background: #C98474;
-    width: 55px;
+    width: 40px;
+    height: 40px;
     line-height: 50px;
     text-align: center;
     color:#F2D388;
@@ -102,7 +104,7 @@ responsive
        transition:all 0.3s ease-in;
    }
    h1:hover::before, h1:hover::after{
-       transform:scale(1);
+    transform:scale(1);
    }
    h1::before{
        left: -140px;

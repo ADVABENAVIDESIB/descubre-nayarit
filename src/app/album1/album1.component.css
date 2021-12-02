@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.h1{
+    display:inline-block;
+    position: relative;
+    left: 35%;
+    COLOR: #ffff;
+    font-family: 'Dancing Script',cursive;
+    font-size: 50px;
+    /*text-align: center;*/
+
+}
+.body{
+    background: #952F57;
+    overflow-x: hidden;
+}
+
+.gallery-container{
+    width: 80%;
+    margin:100px auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: repeat(2,300px);
+}
+
+.gallery-container .gallery-card{overflow:visible};
+
+.gallery-container .gallery-card a{
+    width: 100%;
+    height:100%;
+
+}
+.gallery-container .gallery-card a > img{
+    width: 100%;
+    height:100%;
+    margin: 10px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.gallery-container .gallery-card a > img:hover{
+    transform: scale(1.7) 
+}
