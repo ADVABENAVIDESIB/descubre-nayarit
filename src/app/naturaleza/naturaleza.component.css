@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+   *{
+    box-sizing:border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+   /*#A7D2CB AZULITO*/
+   /*#F2D388 AMARILLO*/
+   /*#C98474 SALMON*/
+   /*#874C62 MORADO*/
+   .buscar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-500%);
+    background: #C98474;
+    padding: 10px;
+    height: 50px;
+    border-radius: 30px;
+}
+.buscar_texto{
+    
+    border: none;
+    background: #C98474;
+    outline: none;
+    color: #F2D388;
+    font-size: 20px;
+    line-height: 40px;
+    transition: .8s;
+    width: 0;
+}
+.btn{
+    top:0;
+    right: 0%;
+    background: #C98474;
+    width: 55px;
+    line-height: 50px;
+    text-align: center;
+    color:#F2D388;
+    font-size:20px;
+    cursor: pointer;
+    border-radius: 50%;
+    
+}
+/*
+responsive
+*/
+@media screen and (min-width:480px){
+    .buscar:hover>.buscar_texto{
+        width: 190px;
+    }
+}
+
+@media screen and (min-width:768px){
+    .buscar:hover>.buscar_texto{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .buscar:hover>.buscar_texto{
+        width: 1500px;
+    }
+}
+   
+   
+   .body{
+       background-color: #A7D2CB;
+       text-align: center;
+   }
+/*boton buscar*/
+
+
+
+/*boton buscar*/
+   h1{
+       display:inline-block;
+       position: relative;
+       COLOR: #533b2a;
+       font-family: 'Dancing Script',cursive;
+       font-size: 50px;
+       /*text-align: center;*/
+   
+   }
+   /*
+   esto es para las rayitas del titulo
+   */
+   h1::after,h1::before{
+       content:'';
+       position: absolute;
+       width: 120px;
+       height: 3px;
+       background-color:currentColor;
+       top:0.6em;
+       transform:scale(0);
+       transition:all 0.3s ease-in;
+   }
+   h1:hover::before, h1:hover::after{
+       transform:scale(1);
+   }
+   h1::before{
+       left: -140px;
+   }
+    h1::after{
+        right:-140px;
+    }
+   /*
+   hasta aqui llega lo de las rayitas del titulo
+   */
+   h2{
+       color:#F2D388
+   }
+   p{
+       color:#C98474;
+   }
+   .tarjeta{
+       border:10px solid #874C62;
+       background-color: #A7D2CB ;
+   }
+   
+   /*
+   responsive
+   */
+   @media screen and (min-width:480px){
+       .buscar:hover>.buscar_texto{
+           width: 190px;
+       }
+   }
+   
+   @media screen and (min-width:768px){
+       .buscar:hover>.buscar_texto{
+           width: 300px;
+       }
+   }
+   
+   @media screen and (min-width:1024px){
+       .buscar:hover>.buscar_texto{
+           width: 500px;
+       }
+   }
+   /*
+   container
+   */
+   .container{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    margin-top: 100px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}

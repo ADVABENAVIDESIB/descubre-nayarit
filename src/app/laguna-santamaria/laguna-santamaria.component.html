@@ -1,0 +1,67 @@
+ <div class="body">
+    <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59450.16975691071!2d-104.60889449426607!3d21.364863659158086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427195c26e305dd%3A0xb5c3634d2b982ba3!2sLaguna%20de%20Santa%20Mar%C3%ADa%20del%20Oro!5e0!3m2!1ses!2smx!4v1638163229908!5m2!1ses!2smx" 
+    width="400" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+ <h1 class="h1">Registrar un local</h1>
+ <form class="form" action="mi_servidor">
+     <fieldset>
+         <legend>Datos del local:</legend>
+
+         <label for="idLocal">Id local:</label><br/>
+         <input type="text" id="idLocal" name="idPersona" 
+             readonly="true" value="100" /><br/>
+
+         <input type="hidden" id="sistema" name="sistema" value="SAP"/>
+
+         <label for="nombre">Nombre:</label><br/>
+         <input type="text" id="nombre" name="nombre" 
+             placeholder="Nombre del local" required="true" /><br/>
+
+        <label for="giro">Giro:</label><br/>
+        <select id="giro" name="giro">
+            <option value="Comida">Comida</option>
+            <option value="Hospedaje">Hospedaje</option>
+            <option value="Diversión" selected="true">Diversión</option>
+        </select><br/>
+
+         <label for="telefono">Telefono:</label><br/>
+         <input type="telefono" id="telefono" name="telefono"/><br/> 
+ 
+
+ 
+         <input type="submit" value="Insertar"/>
+
+ 
+         
+     </fieldset>    
+ </form>
+ 
+<table class="table" border="1">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
