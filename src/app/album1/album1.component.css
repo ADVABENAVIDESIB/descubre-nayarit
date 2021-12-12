@@ -1,24 +1,71 @@
+@font-face{
+    font-family: GothamRoundedMedium_21022;
+    src:url(/descubre-nayarit/src/GothamRoundedMedium_21022.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.h1{
-    display:inline-block;
-    position: relative;
-    left: 35%;
-    COLOR: #ffff;
-    font-family: 'Dancing Script',cursive;
-    font-size: 50px;
-    /*text-align: center;*/
-
-}
 .body{
-    background: #952F57;
+    background: #790726;
     overflow-x: hidden;
 }
 
+.logo{
+    height: 124px;
+    width: 300px;
+    position: absolute;
+    left:9.6%;
+    
+}
+.escudo{
+    height: 124px;
+    width: 280px;
+    position: absolute;
+    left:70%;
+}
+
+h1{
+
+    display:inline-block;
+    position: absolute;
+    left:45%; 
+    COLOR: #ffff;
+    font-family:'GothamRoundedMedium_21022';
+    font-size: 60px;
+    
+
+}
+/*
+esto es para las rayitas del titulo
+*/
+h1::after,h1::before{
+    content:'';
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    background-color:currentColor;
+    top:0.6em;
+    transform:scale(0);
+    transition:all 0.3s ease-in;
+}
+h1:hover::before, h1:hover::after{
+    transform:scale(1);
+}
+h1::before{
+    left: -140px;
+}
+ h1::after{
+     right:-140px;
+ }
+/*
+hasta aqui llega lo de las rayitas del titulo
+*/
 .gallery-container{
+    position: relative;
+    top:50px;
     width: 80%;
     margin:100px auto;
 
@@ -35,8 +82,8 @@
 
 }
 .gallery-container .gallery-card a > img{
-    width: 100%;
-    height:100%;
+    width: 95%;
+    height:95%;
     margin: 10px;
     object-fit: cover;
     transition: 0.5s;

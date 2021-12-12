@@ -11,6 +11,13 @@ import { LagunaSantamariaComponent } from './laguna-santamaria/laguna-santamaria
 import {FormsModule}from '@angular/forms';
 import { HomeGaleryComponent } from './home-galery/home-galery.component';
 import { Album1Component } from './album1/album1.component'
+import {YouTubePlayerModule} from '@angular/youtube-player';
+import { CabaniasComponent } from './cabanias/cabanias.component';
+import { LagunaMoraComponent } from './laguna-mora/laguna-mora.component';
+import { IslasMarietasComponent } from './islas-marietas/islas-marietas.component';
+import { SantuarioComponent } from './santuario/santuario.component';
+import { PuntaMitaComponent } from './punta-mita/punta-mita.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +26,19 @@ import { Album1Component } from './album1/album1.component'
     NaturalezaComponent,
     LagunaSantamariaComponent,
     HomeGaleryComponent,
-    Album1Component
+    Album1Component,
+    CabaniasComponent,
+    LagunaMoraComponent,
+    IslasMarietasComponent,
+    SantuarioComponent,
+    PuntaMitaComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,54 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-
+@font-face{
+    font-family: GothamRoundedMedium_21022;
+    src:url(/descubre-nayarit/src/GothamRoundedMedium_21022.ttf);
+}
    *{
     box-sizing:border-box;
     margin: 0px;
     padding: 0px;
     
 }
-   /*#A7D2CB AZULITO*/
-   /*#F2D388 AMARILLO*/
-   /*#C98474 SALMON*/
-   /*#874C62 MORADO*/
-   .buscar{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+   
+.body{
+    background-color: #790726;
+   
+}
+.logo{
+    height: 124px;
+    width: 300px;
     position: absolute;
-    left: 50%;
-    top:50%;
-    transform: translate(-50%,-500%);
-    background: #C98474;
-    padding: 10px;
-    height: 50px;
-    border-radius: 30px;
-}
-.buscar_texto{
+    left:9.6%;
     
-    border: none;
-    background: #C98474;
-    outline: none;
-    color: #F2D388;
-    font-size: 20px;
-    line-height: 40px;
-    transition: .8s;
-    width: 0;
 }
-.btn{
-    top:0;
-    right: 0%;
-    background: #C98474;
-    width: 55px;
-    line-height: 50px;
-    text-align: center;
-    color:#F2D388;
-    font-size:20px;
-    cursor: pointer;
-    border-radius: 50%;
-    
+.escudo{
+    height: 124px;
+    width: 280px;
+    position: absolute;
+    left:70%;
+}
+.titulo{
+text-align: center;
 }
 /*
-responsive
+colores
+#5E585C
+#CAB39E
+#790726
 */
 @media screen and (min-width:480px){
     .buscar:hover>.buscar_texto{
@@ -68,23 +53,14 @@ responsive
     }
 }
    
-   
-   .body{
-       background-color: #952F57
-       ;
-       text-align: center;
-   }
-/*boton buscar*/
-
-
-
-/*boton buscar*/
+ 
    h1{
        display:inline-block;
-       position: relative;
+       position: absolute;
+       left:45%;
        COLOR: #ffff;
-       font-family: 'Dancing Script',cursive;
-       font-size: 50px;
+       font-family:'GothamRoundedMedium_21022';
+       font-size: 60px;
        /*text-align: center;*/
    
    }
@@ -114,14 +90,14 @@ responsive
    hasta aqui llega lo de las rayitas del titulo
    */
    h2{
-       color:#F2D388
+       color:#790726;
    }
    p{
-       color:#C98474;
+       color:#790726;
    }
    .tarjeta{
-       border:10px solid #874C62;
-       background-color: #A7D2CB ;
+       border:10px solid #790726;
+       background-color: #CAB39E ;
    }
    
    /*
@@ -148,6 +124,19 @@ responsive
    container
    */
    .container{
+    position:relative;
+    top:110px;
+
+
+   
+    max-height:auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: auto;
+}
+   .container{
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -160,11 +149,12 @@ responsive
 .container .card{
     width: 330px;
     height: 430px;
+    background-color: #CAB39E;
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(255,255, 255, 0.5);
     overflow: hidden;
-    margin: 20px;
-    margin-top: 100px;
+    margin: 10px;
+    margin-top: 20px;
     text-align: center;
     transition: all 0.25s;
 }
