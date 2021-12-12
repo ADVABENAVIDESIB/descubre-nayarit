@@ -1,9 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-   *{
+
+*{
        box-sizing:border-box;
        margin: 0;
        padding: 0;
       
    }
-   
+   .landing-page-video, .landing-page-video-overlay {
+    position: relative;
+    width: 100vw;
+    max-width:100%;
+    top: 0;
+    z-index: -100;
+  }
+  
+  .landing-page-video-overlay {
+    height: 56.25vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  @media screen and (max-width: 899px) {
+    .video-overlay-logo {
+      position: absolute;
+      top: 50vh;
+      right: 21%;
+      width: 100vw;
+      animation: fade-in 1s;
+      z-index: 160;
+    }
+  
+  }

@@ -1,0 +1,187 @@
+@font-face{
+    font-family: GothamRoundedMedium_21022;
+    src:url(/descubre-nayarit/src/GothamRoundedMedium_21022.ttf);
+}
+   *{
+    box-sizing:border-box;
+    margin: 0px;
+    padding: 0px;
+    
+}
+   
+.body{
+    background-color: #790726;
+   
+}
+.logo{
+    height: 124px;
+    width: 300px;
+    position: absolute;
+    left:9.6%;
+    
+}
+.escudo{
+    height: 124px;
+    width: 280px;
+    position: absolute;
+    left:70%;
+}
+.titulo{
+text-align: center;
+}
+/*
+colores
+#5E585C
+#CAB39E
+#790726
+*/
+@media screen and (min-width:480px){
+    .buscar:hover>.buscar_texto{
+        width: 190px;
+    }
+}
+
+@media screen and (min-width:768px){
+    .buscar:hover>.buscar_texto{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .buscar:hover>.buscar_texto{
+        width: 1500px;
+    }
+}
+   
+ 
+   h1{
+       display:inline-block;
+       position: absolute;
+       left:45%;
+       COLOR: #ffff;
+       font-family:'GothamRoundedMedium_21022';
+       font-size: 60px;
+       /*text-align: center;*/
+   
+   }
+   /*
+   esto es para las rayitas del titulo
+   */
+   h1::after,h1::before{
+       content:'';
+       position: absolute;
+       width: 120px;
+       height: 3px;
+       background-color:currentColor;
+       top:0.6em;
+       transform:scale(0);
+       transition:all 0.3s ease-in;
+   }
+   h1:hover::before, h1:hover::after{
+       transform:scale(1);
+   }
+   h1::before{
+       left: -140px;
+   }
+    h1::after{
+        right:-140px;
+    }
+   /*
+   hasta aqui llega lo de las rayitas del titulo
+   */
+   h2{
+       color:#790726;
+   }
+   p{
+       color:#790726;
+   }
+   .tarjeta{
+       border:10px solid #790726;
+       background-color: #CAB39E ;
+   }
+   
+   /*
+   responsive
+   */
+   @media screen and (min-width:480px){
+       .buscar:hover>.buscar_texto{
+           width: 190px;
+       }
+   }
+   
+   @media screen and (min-width:768px){
+       .buscar:hover>.buscar_texto{
+           width: 300px;
+       }
+   }
+   
+   @media screen and (min-width:1024px){
+       .buscar:hover>.buscar_texto{
+           width: 500px;
+       }
+   }
+   /*
+   container
+   */
+   .container{
+    position:relative;
+    top:110px;
+
+
+   
+    max-height:auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin: auto;
+}
+   .container{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    background-color: #CAB39E;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(255,255, 255, 0.5);
+    overflow: hidden;
+    margin: 10px;
+    margin-top: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
