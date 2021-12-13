@@ -37,3 +37,21 @@
     </div>
  
  </div>
+<div>
+   <table class="table mt-3 animated fadeIn faster">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Autor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let blog of blogs; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{blog.titulo}}</td>
+      <td>{{blog.autor}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

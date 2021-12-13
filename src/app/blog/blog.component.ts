@@ -16,6 +16,8 @@ import { Observable, ObservableInput } from 'rxjs';
   providers: [DataService]
 })
 export class BlogComponent implements OnInit {
+  
+  blogs: BlogModel[] = [];
 
   public SelectedCategory: Categoria={id: 0, nombre: ''};
   public categorias!: Categoria[];
@@ -24,8 +26,10 @@ export class BlogComponent implements OnInit {
   constructor( private blogService: BlogService, 
     private dataSvc: DataService) { }
 
-  ngOnInit(): void {
-    this.categorias = this.dataSvc.getCategoria();
+  ngOnInit() {
+    this.blogService.getBlogs()
+    .subscribe( resp => this.blogs = resp);
+    
   }
 
   

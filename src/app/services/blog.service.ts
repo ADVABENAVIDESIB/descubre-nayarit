@@ -35,4 +35,25 @@ export class BlogService {
   
   }
   
+  getBlogs(){
+    return this.hhtp.get(`${ this.url }/Blog.json`)
+    .pipe(
+    map(this.crearArreglo)
+    );
+  }
+
+  private crearArreglo(blogObj: any){
+  const blogs: BlogModel[] = [];
+
+  if (blogObj  === null) {return [];}
+
+  Object.keys(blogObj).forEach(key =>{
+    const blog: BlogModel = blogObj[key];
+    blog.id = key;
+
+    blogs.push( blog );
+
+  });
+  return blogs;
+  }
 }
