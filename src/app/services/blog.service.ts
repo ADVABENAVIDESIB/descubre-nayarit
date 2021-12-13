@@ -23,5 +23,16 @@ export class BlogService {
      })
     );
   }
+
+  actualizarBlog(blog: BlogModel){
+   
+    const blogTemp = {
+      ...blog
+    };
+    delete blogTemp.id;
+
+    return this.hhtp.put(`${ this.url }/Blog/${ blog.id }.json`,blog);
+  
+  }
   
 }

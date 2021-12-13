@@ -11,7 +11,6 @@ import { BlogComponent } from './blog/blog.component';
 import {FormsModule}from '@angular/forms';
 import { HomeGaleryComponent } from './home-galery/home-galery.component';
 import { Album1Component } from './album1/album1.component';
-import {YouTubePlayerModule} from '@angular/youtube-player';
 import { CabaniasComponent } from './cabanias/cabanias.component';
 import { LagunaMoraComponent } from './laguna-mora/laguna-mora.component';
 import { IslasMarietasComponent } from './islas-marietas/islas-marietas.component';
@@ -39,7 +38,6 @@ import { PuntaMitaComponent } from './punta-mita/punta-mita.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,8 @@ import { BlogModel } from '../models/blogs.model';
 import { BlogService } from '../services/blog.service';
 import { Categoria } from '../models/Interface';
 import { DataService } from '../services/data.service';
+import Swal from 'sweetalert2';
+import { Observable, ObservableInput } from 'rxjs';
 
 
 
@@ -35,10 +37,29 @@ export class BlogComponent implements OnInit {
       return;
     }
 
-    this.blogService.crearBlog(this.blog)
-    .subscribe( resp => {
-    console.log(resp);
-    })
+    Swal.fire({
+      title: 'Espere',
+      text: 'Guardando Información',
+      icon: 'info',
+      allowOutsideClick: false
+    });
+    Swal.showLoading();
+
+    let peticion: Observable<any>;
+
+    if (this.blog.id){
+    peticion = this.blogService.actualizarBlog(this.blog);
+   }else{
+    peticion = this.blogService.crearBlog(this.blog);
+    }
+    peticion.subscribe( resp =>{
+      Swal.fire({
+        title: this.blog.titulo,
+        text: 'Se actualizó correctamente',
+        icon: 'success',
+      })
+    });
+   
   }
 
 
