@@ -26,13 +26,15 @@ export class BlogComponent implements OnInit {
   constructor( private blogService: BlogService, 
     private dataSvc: DataService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.blogService.getBlogs()
-    .subscribe( resp => this.blogs = resp);
+    .subscribe( resp => this.blogs = resp)
     
   }
+  borrar (idBlog: string){
 
-  
+    this.blogService.borrarBlog(idBlog);
+  }
 
   guardar (form: NgForm){
 
