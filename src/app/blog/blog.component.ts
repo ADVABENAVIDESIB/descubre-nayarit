@@ -31,9 +31,8 @@ export class BlogComponent implements OnInit {
     .subscribe( resp => this.blogs = resp)
     
   }
-  borrar (idBlog: string){
-
-    this.blogService.borrarBlog(idBlog);
+  borrar (i: number){
+    this.blogService.borrarBlog(this.blogs[i]);
   }
 
   guardar (form: NgForm){

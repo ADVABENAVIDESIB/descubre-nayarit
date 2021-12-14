@@ -34,9 +34,8 @@ export class BlogService {
     return this.hhtp.put(`${ this.url }/Blog/${ blog.id }.json`,blog);
   
   }
-  borrarBlog(idBlog: string){
-
-    return this.hhtp.delete(`${ this.url }/Blog/${ idBlog }.json`)
+  borrarBlog(blog: BlogModel){
+    return this.hhtp.delete(`${ this.url }/Blog/${ blog.id }.json`)
   }
   
   getBlogs(){

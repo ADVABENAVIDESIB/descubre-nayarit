@@ -1,9 +1,9 @@
 
 
 export class BlogModel {
-   id?: String;
-   autor!: String;
-   titulo!: String;
+   id?: string;
+   autor!: string;
+   titulo!: string;
 
    constructor(){
  
