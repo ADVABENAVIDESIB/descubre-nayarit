@@ -32,7 +32,22 @@ export class BlogComponent implements OnInit {
     
   }
   borrar (i: number){
-    this.blogService.borrarBlog(this.blogs[i]);
+    const blogTemp = this.blogs[i];
+    this.blogService.borrarBlog(this.blogs[i]).subscribe(
+      res => {
+        Swal.fire({
+          title: 'Eliminación exitosa',
+          text: 'Se ha borrado el blog: ' + blogTemp.autor,
+          icon: 'success'
+        });
+        console.log(res);
+        this.blogService.getBlogs()
+        .subscribe(res => {
+          this.blogs = res
+          console.log(res)
+        });
+      }
+    )
   }
 
   guardar (form: NgForm){

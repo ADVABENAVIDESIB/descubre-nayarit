@@ -1,7 +1,7 @@
 
 
 export class BlogModel {
-   id?: string;
+   id!: string;
    autor!: string;
    titulo!: string;
 

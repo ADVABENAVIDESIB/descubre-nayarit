@@ -29,13 +29,14 @@ export class BlogService {
     const blogTemp = {
       ...blog
     };
-    delete blogTemp.id;
+   
 
     return this.hhtp.put(`${ this.url }/Blog/${ blog.id }.json`,blog);
   
   }
   borrarBlog(blog: BlogModel){
-    return this.hhtp.delete(`${ this.url }/Blog/${ blog.id }.json`)
+    console.log(`${ this.url }/Blog/${ blog.id }.json`);
+    return this.hhtp.delete(`${this.url}/Blog/${blog.id}.json`);
   }
   
   getBlogs(){
