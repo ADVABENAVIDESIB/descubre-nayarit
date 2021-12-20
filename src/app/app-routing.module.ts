@@ -13,6 +13,8 @@ import { IslasMarietasComponent } from './islas-marietas/islas-marietas.componen
 import { LagunaMoraComponent } from './laguna-mora/laguna-mora.component';
 import { PuntaMitaComponent } from './punta-mita/punta-mita.component';
 import { SantuarioComponent } from './santuario/santuario.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes:Routes=[
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,7 +30,9 @@ const routes:Routes=[
   { path: 'islas-marietas',component:IslasMarietasComponent},
   { path: 'laguna-mora',component:LagunaMoraComponent},
   { path: 'punta-mita',component:PuntaMitaComponent},
-  { path: 'santuario',component:SantuarioComponent}
+  { path: 'login',component:LoginComponent},
+  { path: 'register',component:RegisterComponent},  
+  { path: 'santuario',component:SantuarioComponent},
 ]
 
 @NgModule({

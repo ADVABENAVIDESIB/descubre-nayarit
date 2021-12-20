@@ -16,6 +16,13 @@ import { LagunaMoraComponent } from './laguna-mora/laguna-mora.component';
 import { IslasMarietasComponent } from './islas-marietas/islas-marietas.component';
 import { SantuarioComponent } from './santuario/santuario.component';
 import { PuntaMitaComponent } from './punta-mita/punta-mita.component';
+import { LoginComponent } from './login/login.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from 'src/environments/environment';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -31,13 +38,18 @@ import { PuntaMitaComponent } from './punta-mita/punta-mita.component';
     LagunaMoraComponent,
     IslasMarietasComponent,
     SantuarioComponent,
-    PuntaMitaComponent
-   
+    PuntaMitaComponent,
+    LoginComponent,
+    NavbarComponent,
+    RegisterComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

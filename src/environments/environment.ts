@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyDo3eH59HYilUy6NkWwOgBxU_TpkPDr4os",
+    authDomain: "turismo-nayarit.firebaseapp.com",
+    databaseURL: "https://turismo-nayarit-default-rtdb.firebaseio.com",
+    projectId: "turismo-nayarit",
+    storageBucket: "turismo-nayarit.appspot.com",
+    messagingSenderId: "35013614717",
+    appId: "1:35013614717:web:9a95ac20a6269ceab1a514"
+  }
 };
 
 /*
