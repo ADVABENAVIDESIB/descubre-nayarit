@@ -1,0 +1,130 @@
+
+  @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+  *{
+   box-sizing:border-box;
+   margin: 0px;
+   padding: 0px;
+   
+}
+  /*#A7D2CB AZULITO*/
+  /*#F2D388 AMARILLO*/
+  /*#C98474 SALMON*/
+  /*#874C62 MORADO*/
+ 
+/*
+responsive
+*/
+@media screen and (min-width:480px){
+   .buscar:hover>.buscar_texto{
+       width: 190px;
+   }
+}
+
+@media screen and (min-width:768px){
+   .buscar:hover>.buscar_texto{
+       width: 300px;
+   }
+}
+
+@media screen and (min-width:1024px){
+   .buscar:hover>.buscar_texto{
+       width: 1500px;
+   }
+}
+  
+  
+  .body{
+      background-color: #A7D2CB;
+      text-align: center;
+  }
+/*boton buscar*/
+
+
+input{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+/*boton buscar*/
+  h1{
+      display:inline-block;
+      position: relative;
+      COLOR: #533b2a;
+      font-family: 'Dancing Script',cursive;
+      font-size: 50px;
+      /*text-align: center;*/
+  
+  }
+  label{
+    font-family: 'Dancing Script',cursive;
+    font-size:30px;
+    color: #C98474;
+ }
+ button{
+     width: 80px;
+     height: 40px;
+     border-radius: 80%;
+ }
+ table{
+     width: 80%;
+     position: relative;
+     left: 10%;
+ }
+  /*
+  esto es para las rayitas del titulo
+  */
+  h1::after,h1::before{
+      content:'';
+      position: absolute;
+      width: 120px;
+      height: 3px;
+      background-color:currentColor;
+      top:0.6em;
+      transform:scale(0);
+      transition:all 0.3s ease-in;
+  }
+  h1:hover::before, h1:hover::after{
+   transform:scale(1);
+  }
+  h1::before{
+      left: -140px;
+  }
+   h1::after{
+       right:-140px;
+   }
+  /*
+  hasta aqui llega lo de las rayitas del titulo
+  */
+  h2{
+      color:#F2D388
+  }
+  p{
+      color:#C98474;
+  }
+  .tarjeta{
+      border:10px solid #874C62;
+      background-color: #A7D2CB ;
+  }
+  
+  /*
+  responsive
+  */
+  @media screen and (min-width:480px){
+      .buscar:hover>.buscar_texto{
+          width: 190px;
+      }
+  }
+  
+  @media screen and (min-width:768px){
+      .buscar:hover>.buscar_texto{
+          width: 300px;
+      }
+  }
+  
+  @media screen and (min-width:1024px){
+      .buscar:hover>.buscar_texto{
+          width: 500px;
+      }
+  }
+ 

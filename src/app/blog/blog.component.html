@@ -1,3 +1,5 @@
+
+<div class=body>
 <h1>Agregar Blog</h1>
 <hr>
 
@@ -8,27 +10,27 @@
         <form (ngSubmit)="guardar ( f )"
                #f="ngForm">
             <div class="mb-3">
-              <label>Firebase ID</label>  
-              <input type="text" class="form-control" placeholder="Firebase ID" [(ngModel)]="blog.id" name="id">
-              <small class=form-text text-muted>Este campo es autogenerado</small>
+              <label hidden>Firebase ID</label>  
+              <input type="text" class="form-control" style="background-color:#F2D388;" hidden placeholder="Firebase ID" [(ngModel)]="blog.id" name="id" disabled="disabled">
+              <small class=form-text text-muted hidden>Este campo es autogenerado</small>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Titulo</label>
-                <input type="text" class="form-control" id="Titulo" placeholder="Título" [(ngModel)]="blog.titulo" name="email" required>
+                <label for="exampleInputEmail1" class="form-label">Experiencia</label>
+                <input type="text" class="form-control" style="height: 40px; background-color:#F2D388;" id="Titulo" placeholder="Titulo" [(ngModel)]="blog.titulo" name="text" required>
               </div>
             <div class="mb-3">
               <label for="Autor" class="form-label">Autor</label>
-              <input type="text" class="form-control" id="Autor" [(ngModel)]="blog.autor" name="autor">
+              <input type="text" class="form-control" style="height: 40px;background-color:#F2D388;" id="Autor" [(ngModel)]="blog.autor" name="autor"placeholder="e-mail o nombre" >
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Insertar</button>
           </form>
 
     </div>
 </div>
 <div class="row text-end">
     <div class="col">
-      <button class="btn btn-danger"
+      <button class="btn btn-danger" style="background-color:#F2D388; border-color:#F2D388; width: 100px; position: relative; right:10%;"
               routerLink="/home"> 
           <i class="fa fa-arrow-left"></i>
           Regresar
@@ -41,7 +43,7 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Titulo</th>
+      <th scope="col">Experiencia</th>
       <th scope="col">Autor</th>
     </tr>
   </thead>
@@ -58,3 +60,4 @@
 </table>
 </div>
 
+</div>

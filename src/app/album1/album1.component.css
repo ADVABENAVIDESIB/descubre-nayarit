@@ -8,9 +8,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-.body{
-    background: #790726;
-    overflow-x: hidden;
+.barraSup{
+    background-color: #790726;
+    height: 125px
+}
+.barraInf{
+    background-color: #790726;
+    height: 125px
 }
 
 .logo{
@@ -26,6 +30,9 @@
     position: absolute;
     left:70%;
 }
+.titulo{
+    font-size: 60px;
+        }
 
 h1{
 
@@ -33,53 +40,66 @@ h1{
     position: absolute;
     left:45%; 
     COLOR: #ffff;
-    font-family:'GothamRoundedMedium_21022';
-    font-size: 60px;
     
+    font-family:'GothamRoundedMedium_21022';
 
 }
-/*
-esto es para las rayitas del titulo
-*/
-h1::after,h1::before{
-    content:'';
-    position: absolute;
-    width: 120px;
-    height: 3px;
-    background-color:currentColor;
-    top:0.6em;
-    transform:scale(0);
-    transition:all 0.3s ease-in;
+.vidio{
+    position: relative;
+    margin-top: -23.5%;
+    margin-left: 3%;
+    height:380px;
+    width:340px;
 }
-h1:hover::before, h1:hover::after{
-    transform:scale(1);
+  /*para el slider inicio*/
+
+.slider{
+    height: 10px;
 }
-h1::before{
-    left: -140px;
+.carousel-item{
+    width: 300px;
+    height: 350px;
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    -o-background-size:cover;
+    background-size: 50%;
+  }
+  
+
+  @media (max-width: 600px) {
+    .carousel-item {
+      height: 280px;
+    }
+  }
+  /*para el slider fin*/
+
+  .contenedorSlider{
+    width: 78.5%;
+    height: 350px;
+    margin-left: 10.8%;
+  }
+
+
+.navegacion{
+    background-color: #790726;
+    color:white;
+    font-family:'GothamRoundedMedium_21022';
 }
- h1::after{
-     right:-140px;
- }
-/*
-hasta aqui llega lo de las rayitas del titulo
-*/
 .gallery-container{
     position: relative;
-    top:50px;
     width: 80%;
-    margin:100px auto;
+    margin:auto;
 
     display: grid;
     grid-template-columns: repeat(3, 33.33%);
     grid-template-rows: repeat(2,300px);
 }
 
-.gallery-container .gallery-card{overflow:visible};
+.gallery-container .gallery-card{overflow:hidden};
 
 .gallery-container .gallery-card a{
     width: 100%;
     height:100%;
-
 }
 .gallery-container .gallery-card a > img{
     width: 95%;
@@ -89,5 +109,65 @@ hasta aqui llega lo de las rayitas del titulo
     transition: 0.5s;
 }
 .gallery-container .gallery-card a > img:hover{
-    transform: scale(1.7) 
+    transform: scale(1.2) 
+    rotate(10deg);
+ }
+
+
+ 
+@media screen and (max-width:1024px){
+ 
+        .logo{
+            height:68px;
+            width: 150px;
+            padding-top: 10px;
+    
+        }
+        .escudo{
+            height: 62px;
+            width: 140px;
+            padding-top: 10px;
+        }
+        .titulo{font-size: 30px;
+        
+        }   
+        .barraSup{
+            height: 60px;
+        }
+        .barraInf{
+            height: 100px;
+        }
+
+    }
+
+    .main-nav{
+        display: flex;
+        background: linear-gradient(rgba(167, 210, 203, 0.6), rgba(167, 210, 203, 0.6));
+    } 
+
+    ul{
+ 
+    display: flex;
+   
+    
+}
+
+ul li a {
+ 
+   display: inline-block;
+   padding: 20px 40px;
+   font-size: 1.3rem;
+   color:white;
+}
+
+ul li a:hover{
+    background: #A7D2CB;
+}
+
+ol, ul {
+	list-style: none;
+}
+ 
+a {
+text-decoration: none;
 }
