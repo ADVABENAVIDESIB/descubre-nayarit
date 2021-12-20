@@ -15,7 +15,7 @@ export class LugarService {
 
   crearLugar(lugar: LugarModel){
    
-    return this.hhtp.post(`${ this.url }/Blog.json`,lugar)
+    return this.hhtp.post(`${ this.url }/Lugar.json`,lugar)
     .pipe(
      map( (resp: any ) => {
        lugar.id = resp.name;

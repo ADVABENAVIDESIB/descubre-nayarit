@@ -1,1 +1,68 @@
-<p>lugar works!</p>
+<div class=body>
+    <h1>Agregar Lugar</h1>
+    <hr>
+    
+    
+    
+    <div class="row animiated fadeIn faster">
+        <div class="col">
+            <form (ngSubmit)="guardar ( f )"
+                   #f="ngForm">
+                <div class="mb-3">
+                  <label hidden>Firebase ID</label>  
+                  <input type="text" class="form-control" style="background-color:#F2D388;" hidden placeholder="Firebase ID" [(ngModel)]="lugar.id" name="id" disabled="disabled">
+                  <small class=form-text text-muted hidden>Este campo es autogenerado</small>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nombre del lugar</label>
+                    <input type="text" class="form-control" style="height: 40px; background-color:#F2D388;" id="Nombre" placeholder="Nombre" [(ngModel)]="lugar.nombre" name="text" required>
+                  </div>
+                <div class="mb-3">
+                  <label for="Autor" class="form-label">Giro</label>
+                  <input type="text" class="form-control" style="height: 40px;background-color:#F2D388;" id="Giro" [(ngModel)]="lugar.giro" name="giro"placeholder="giro" >
+                </div>
+                <div class="mb-3">
+                    <label for="Autor" class="form-label">Contacto</label>
+                    <input type="text" class="form-control" style="height: 40px;background-color:#F2D388;" id="Autor" [(ngModel)]="lugar.contacto" name="contacto"placeholder="contacto" >
+                  </div>
+
+                <button type="submit" class="btn btn-primary">Insertar</button>
+              </form>
+    
+        </div>
+    </div>
+    <div class="row text-end">
+        <div class="col">
+          <button class="btn btn-danger" style="background-color:#F2D388; border-color:#F2D388; width: 100px; position: relative; right:10%;"
+                  routerLink="/home"> 
+              <i class="fa fa-arrow-left"></i>
+              Regresar
+          </button>
+        </div>
+     
+     </div>
+    <div>
+       <table class="table mt-3 animated fadeIn faster">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Giro</th>
+          <th scope="col">Contacto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lugar of lugares; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{lugar.nombre}}</td> 
+          <td>{{lugar.giro}}</td>
+          <td>{{lugar.contacto}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="borrar(i)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    </div>
