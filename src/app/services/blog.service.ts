@@ -30,8 +30,8 @@ export class BlogService {
       ...blog
     };
    
-
-    return this.hhtp.put(`${ this.url }/Blog/${ blog.id }.json`,blog);
+    return this.hhtp.put(`${ this.url }/Blog/${ blog.id }.json`,blog)
+  
   
   }
   borrarBlog(blog: BlogModel){

@@ -31,6 +31,26 @@ export class BlogComponent implements OnInit {
     .subscribe( resp => this.blogs = resp)
     
   }
+  editar(i: number){
+    const blogTemp = this.blogs[i];
+    this.blogService.actualizarBlog(this.blogs[i]).subscribe(
+      res => {
+        Swal.fire({
+          title: 'Puede Actualizar',
+          text: 'Mofique los campos del blog: ' + blogTemp.titulo,
+          icon: 'success'
+        });
+        console.log(res);
+        this.blogService.getBlogs()
+        .subscribe(res => {
+          this.blogs = res
+          console.log(res)
+        });
+      }
+    )
+
+  }
+
   borrar (i: number){
     const blogTemp = this.blogs[i];
     this.blogService.borrarBlog(this.blogs[i]).subscribe(
@@ -72,13 +92,22 @@ export class BlogComponent implements OnInit {
    }else{
     peticion = this.blogService.crearBlog(this.blog);
     }
-    peticion.subscribe( resp =>{
+    peticion.subscribe( 
+      res =>{
       Swal.fire({
         title: this.blog.titulo,
         text: 'Se actualizó correctamente',
         icon: 'success',
-      })
-    });
+      });
+      console.log(res);
+      this.blogService.getBlogs()
+      .subscribe(res => {
+        this.blogs = res
+        console.log(res)
+      });
+    }
+    );
+    
    
   }
 
