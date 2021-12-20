@@ -19,6 +19,7 @@ import { environment } from 'src/environments/environment';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LugarComponent } from './lugar/lugar.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { LugarComponent } from './lugar/lugar.component';
     LoginComponent,
     NavbarComponent,
     RegisterComponent,
-    LugarComponent
+    LugarComponent,
+    ContactoComponent
   
   ],
   imports: [
